@@ -1,0 +1,176 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: jejuH;
+    src: url('../fonts/JejuHallasan.ttf');
+}
+
+@font-face {
+    font-family: jejuM;
+    src: url('../fonts/JejuMyeongjo.ttf');
+}
+
+@font-face {
+    font-family: jejuG;
+    src: url('../fonts/JejuGothic.ttf');
+}
+
+@font-face {
+    font-family: BBB;
+    src: url('../fonts/BareunBatangB.ttf');
+}
+
+@font-face {
+    font-family: BBL;
+    src: url('../fonts/BareunBatangL.ttf');
+}
+
+@font-face {
+    font-family: BBM;
+    src: url('../fonts/BareunBatangM.ttf');
+}
+
+* {
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+.container {width: 1200px; margin: 0 auto;}
+.container_big {width: 1400px; margin: 0 auto;}
+.btn {display: inline-block; padding: 8px 10px 6px; color: white; font-family: Gothic; font-weight: bold; border-radius: 6px;}
+.admin_cancel_btn {border: none; font-size: 15px; color: white; cursor: pointer; background: gray; width: 70px; height: 30px; display: inline-block; padding: 5px 10px 31px; font-size: 18px; font-weight: bold; text-align: center;}
+
+header {background-color: rgba(0, 0, 0, 0.45); position: absolute; width: 100%; transition: background-color 300ms; position: fixed; top: 0; left: 0; z-index: 100; padding-top: 20px}
+header:hover {background-color: white;}
+header:hover > nav > ul.main_menu > li > a {color: black;}
+header > nav {display: flex; justify-content: space-between;}
+header > div.login_register {border-top: 5px solid rgb(200, 0, 0); position: absolute; top: 0; left: 0; width: 100%;}
+header > div.login_register > div > ul {display: flex; margin-left: 1122px; background-color: rgb(200, 0, 0); width: 294px; border-radius: 0 0 8px 8px; border: 1px solid rgb(200, 0, 0);}
+header > div.login_register > div > ul > li {margin-right: 5px; position: relative;}
+header > div.login_register > div > ul > li::after {content: ""; display: block; background-color: rgb(255, 255, 255); height: 12px; width: 1px; position: absolute; top: 7px; left: 58px;}
+header > div.login_register > div > ul > li:nth-child(2):after {left: 70px;}
+header > div.login_register > div > ul > li:nth-child(3):after {left: 83px;}
+header > div.login_register > div > ul > li:last-child:after {display: none;}
+header > div.login_register > div > ul > li > a {display: inline-block; padding: 0 10px 5px; color: white; font-family: Gothic; font-size: 12px;}
+header > div.login_register > div > ul.only_member {width: 306px}
+header > div.login_register > div > ul.only_member > li:nth-child(1):after {left: 70px;}
+
+
+header > nav > a {margin: auto 0; line-height: 100%;}
+header > nav > ul.main_menu {display: flex;}
+header > nav > ul.main_menu > li {height: 95px;}
+header > nav > ul.main_menu > li > a {display: inline-block; height: 100%; padding: 0 20px; font-size: 20px; font-weight: bold; line-height: 100px; position: relative; color: white;}
+
+@keyframes underline1 {0% {width: 0;} 100% {width: 45px;}}
+@keyframes underline2 {0% {width: 0;} 100% {width: 75px;}}
+@keyframes underline3 {0% {width: 0;} 100% {width: 60px;}}
+@keyframes underline4 {0% {width: 0;} 100% {width: 60px;}}
+@keyframes underline5 {0% {width: 0;} 100% {width: 55px;}}
+/*메인 메뉴 호버 시 애니메이션*/
+
+@keyframes admin_underline1 {0% {width: 0;} 100% {width: 45px;}}
+@keyframes admin_underline2 {0% {width: 0;} 100% {width: 75px;}}
+@keyframes admin_underline3 {0% {width: 0;} 100% {width: 60px;}}
+@keyframes admin_underline4 {0% {width: 0;} 100% {width: 80px;}}
+@keyframes admin_underline5 {0% {width: 0;} 100% {width: 80px;}}
+/*메인 메뉴 호버 시 애니메이션(관리자 페이지)*/
+
+header > nav > ul.main_menu > li:first-child:hover > a:after {content: ""; display: block; position: absolute; background: rgb(211, 39, 8); height: 3px; width: 45px; top: 70px; left: 26px; animation: underline1 200ms;}
+header > nav > ul.main_menu > li:nth-child(2):hover > a:after {content: ""; display: block; position: absolute; background: rgb(211, 39, 8); height: 3px; width: 75px; top: 70px; left: 34px; animation: underline2 200ms;}
+header > nav > ul.main_menu > li:nth-child(3):hover > a:after {content: ""; display: block; position: absolute; background: rgb(211, 39, 8); height: 3px; width: 60px; top: 70px; left: 33px; animation: underline3 200ms;}
+header > nav > ul.main_menu > li:nth-child(4):hover > a:after {content: ""; display: block; position: absolute; background: rgb(211, 39, 8); height: 3px; width: 60px; top: 70px; left: 33px; animation: underline4 200ms;}
+header > nav > ul.main_menu > li:last-child:hover > a:after {content: ""; display: block; position: absolute; background: rgb(211, 39, 8); height: 3px; width: 55px; top: 70px; left: 33px; animation: underline5 200ms;}
+/*메인 메뉴 호버 시 나타나는 밑줄*/
+
+header > nav > ul.main_menu > li.admin_mm_list:first-child:hover > a:after {content: ""; display: block; position: absolute; background: rgb(211, 39, 8); height: 3px; width: 45px; top: 70px; left: 26px; animation: admin_underline1 200ms;}
+header > nav > ul.main_menu > li.admin_mm_list:nth-child(2):hover > a:after {content: ""; display: block; position: absolute; background: rgb(211, 39, 8); height: 3px; width: 75px; top: 70px; left: 34px; animation: admin_underline2 200ms;}
+header > nav > ul.main_menu > li.admin_mm_list:nth-child(3):hover > a:after {content: ""; display: block; position: absolute; background: rgb(211, 39, 8); height: 3px; width: 60px; top: 70px; left: 33px; animation: admin_underline3 200ms;}
+header > nav > ul.main_menu > li.admin_mm_list:nth-child(4):hover > a:after {content: ""; display: block; position: absolute; background: rgb(211, 39, 8); height: 3px; width: 80px; top: 70px; left: 46px; animation: admin_underline4 200ms;}
+header > nav > ul.main_menu > li.admin_mm_list:last-child:hover > a:after {content: ""; display: block; position: absolute; background: rgb(211, 39, 8); height: 3px; width: 80px; top: 70px; left: 43px; animation: admin_underline5 200ms;}
+/*메인 메뉴 호버 시 나타나는 밑줄(관리자 페이지)*/
+
+header.active {background-color: white; border-bottom: 2px solid rgb(197, 197, 197); padding-top: 0;}
+header.active > div.login_register {display: none;}
+header.active > .container {width: 1300px; transition: all 300ms ease;}
+header.active > nav > a > img {width: 250px; margin: auto; transition: all 300ms ease;}
+header.active > nav > ul.main_menu > li {height: 80px; transition: all 300ms ease;}
+header.active > nav > ul.main_menu > li > a {padding: 0 30px; font-size: 18px; line-height: 80px; color: black; transition: all 300ms ease;}
+header.active > nav > ul.main_menu > li:first-child:hover > a:after {left: 33px; top: 58px;}
+header.active > nav > ul.main_menu > li:nth-child(2):hover > a:after {left: 43px; top: 58px;}
+header.active > nav > ul.main_menu > li:nth-child(3):hover > a:after {left: 39px; top: 58px;}
+header.active > nav > ul.main_menu > li:nth-child(4):hover > a:after {left: 39px; top: 58px;}
+header.active > nav > ul.main_menu > li:last-child:hover > a:after {left: 40px; top: 58px;}
+/*스크롤 반응 메인메뉴*/
+
+header.active > nav > ul.main_menu > li:first-child:hover > a:after {left: 33px; top: 58px;}
+header.active > nav > ul.main_menu > li:nth-child(2):hover > a:after {left: 43px; top: 58px;}
+header.active > nav > ul.main_menu > li:nth-child(3):hover > a:after {left: 39px; top: 58px;}
+header.active > nav > ul.main_menu > li:nth-child(4):hover > a:after {left: 50px; top: 58px;}
+header.active > nav > ul.main_menu > li:last-child:hover > a:after {left: 48px; top: 58px;}
+/*스크롤 반응 메인메뉴(관리자 페이지)*/
+
+/*서브메뉴 시작*/
+/*일반 페이지 서브메뉴 시작*/
+header > nav > ul.main_menu > li > ul.mm1, header > nav > ul.main_menu > li > ul.mm2, header > nav > ul.main_menu > li > ul.mm3 {width: 100%; position: absolute; top: 115px; left: 0px; background-color: white; border-top: 1px solid black; display: none; text-align: center; border-bottom: 2px solid rgb(197, 197, 197); z-index: 100;}
+header > nav > ul.main_menu > li > ul.mm1 > li, ul.mm2 > li, ul.mm3 > li {height: 50px;  display: inline-block;}
+header > nav > ul.main_menu > li > ul.mm1 > li:first-child {position: relative; margin-right: 50px; margin-left: 545px;}
+header > nav > ul.main_menu > li > ul.mm2 > li:first-child {position: relative; margin-right: 50px; margin-left: 770px;}
+header > nav > ul.main_menu > li > ul.mm3 > li:first-child {position: relative; margin-right: 50px; margin-left: 1265px;}
+header > nav > ul.main_menu > li > ul.mm1 > li:first-child::after {content: ""; display: inline-block; background: black; height: 20px; width: 1px; position: absolute; top: 17px; left: 140px;}
+header > nav > ul.main_menu > li > ul.mm2 > li:first-child::after {content: ""; display: inline-block; background: black; height: 20px; width: 1px; position: absolute; top: 17px; left: 65px;}
+header > nav > ul.main_menu > li > ul.mm3 > li:first-child::after {content: ""; display: inline-block; background: black; height: 20px; width: 1px; position: absolute; top: 17px; left: 125px;}
+header > nav > ul.main_menu > li > ul.mm1 > li > a, ul.mm2 > li > a, ul.mm3 > li > a {font-size: 18px; font-weight: bold; display: inline-block; height: 100%; line-height: 50px;}
+header > nav > ul.main_menu > li > ul.mm1 > li > a:hover, ul.mm2 > li > a:hover, ul.mm3 > li > a:hover {color: rgb(211, 39, 8);}
+
+header.active > nav > ul.main_menu > li > ul.mm1, 
+header.active > nav > ul.main_menu > li > ul.mm2, 
+header.active > nav > ul.main_menu > li > ul.mm3 {top: 80px; display: none; z-index: 100;}
+header.active > nav > ul.main_menu > li > ul.mm1 > li:first-child {position: relative; margin-right: 50px; margin-left: 470px;}
+header.active > nav > ul.main_menu > li > ul.mm2 > li:first-child {position: relative; margin-right: 50px; margin-left: 720px;}
+header.active > nav > ul.main_menu > li > ul.mm3 > li:first-child {position: relative; margin-right: 50px; margin-left: 1255px;}
+/*일반 페이지 서브메뉴 끝*/
+
+/*관리자 페이지 서브메뉴 시작*/
+header > nav > ul.main_menu > li > ul.admin_mm1, header > nav > ul.main_menu > li > ul.admin_mm2, header > nav > ul.main_menu > li > ul.admin_mm3 {width: 100%; position: absolute; top: 115px; left: 0px; background-color: white; border-top: 1px solid black; display: none; text-align: center; border-bottom: 2px solid rgb(197, 197, 197); z-index: 100;}
+header > nav > ul.main_menu > li > ul.admin_mm1 > li, ul.admin_mm2 > li, ul.admin_mm3 > li {height: 50px;  display: inline-block;}
+header > nav > ul.main_menu > li > ul.admin_mm1 > li:first-child {position: relative; margin-right: 50px; margin-left: 355px;}
+header > nav > ul.main_menu > li > ul.admin_mm2 > li:first-child {position: relative; margin-right: 50px; margin-left: 770px;}
+header > nav > ul.main_menu > li > ul.admin_mm3 > li:first-child {position: relative; margin-right: 50px; margin-left: 1230px;}
+header > nav > ul.main_menu > li > ul.admin_mm1 > li:first-child::after {content: ""; display: inline-block; background: black; height: 20px; width: 1px; position: absolute; top: 17px; left: 140px;}
+header > nav > ul.main_menu > li > ul.admin_mm2 > li:first-child::after {content: ""; display: inline-block; background: black; height: 20px; width: 1px; position: absolute; top: 17px; left: 65px;}
+header > nav > ul.main_menu > li > ul.admin_mm3 > li:first-child::after {content: ""; display: inline-block; background: black; height: 20px; width: 1px; position: absolute; top: 17px; left: 125px;}
+header > nav > ul.main_menu > li > ul.admin_mm1 > li > a, ul.admin_mm2 > li > a, ul.admin_mm3 > li > a {font-size: 18px; font-weight: bold; display: inline-block; height: 100%; line-height: 50px;}
+header > nav > ul.main_menu > li > ul.admin_mm1 > li > a:hover, ul.admin_mm2 > li > a:hover, ul.admin_mm3 > li > a:hover {color: rgb(211, 39, 8);}
+
+header.active > nav > ul.main_menu > li > ul.admin_mm1, 
+header.active > nav > ul.main_menu > li > ul.admin_mm2, 
+header.active > nav > ul.main_menu > li > ul.admin_mm3 {top: 80px; display: none; z-index: 100;}
+header.active > nav > ul.main_menu > li > ul.admin_mm1 > li:first-child {position: relative; margin-right: 50px; margin-left: 300px;}
+header.active > nav > ul.main_menu > li > ul.admin_mm2 > li:first-child {position: relative; margin-right: 50px; margin-left: 720px;}
+header.active > nav > ul.main_menu > li > ul.admin_mm3 > li:first-child {position: relative; margin-right: 50px; margin-left: 1210px;}
+/*관리자 페이지 서브메뉴 끝*/
+/*서브메뉴 끝*/
+
+/*후터 시작*/
+footer {background-color: rgb(41, 41, 41);}
+footer > ul.footer_top {display: flex; padding: 15px 0; justify-content: center; border-bottom: 1px solid rgb(20, 20, 20); box-shadow: 0 3px 4px -4px rgb(70, 70, 70);}
+footer > ul.footer_top > li {margin-right: 30px; position: relative;}
+footer > ul.footer_top > li::after {content: ""; display: block; height: 15px; width: 1px; background: rgb(180, 180, 180); position: absolute; top: 5px; left: -15px;}
+footer > ul.footer_top > li:first-child::after{display: none;}
+footer > ul.footer_top > li > a {color: rgb(180, 180, 180);}
+footer > div > div.footer_middle {padding-bottom: 20px;}
+footer > div > div.footer_middle > div {display: flex; justify-content: center; padding: 15px 0;}
+footer > div > div.footer_middle > div > img {margin-right: 30px;}
+footer > div > div.footer_middle > div > div.address {padding-top: 10px;}
+footer > div > div.footer_middle > div > div.address > p {color: rgb(180, 180, 180);}
+footer > div > div.footer_middle > ul {display: flex; justify-content: center;}
+footer > div > div.footer_middle > ul > li {color: rgb(180, 180, 180); margin-right: 20px; position: relative; font-size: 14px;}
+footer > div > div.footer_middle > ul > li::after {content: ""; display: block; height: 15px; width: 1px; background: rgb(141, 141, 141); position: absolute; top: 4px; left: -10px;}
+footer > div > div.footer_middle > ul > li:first-child::after {display: none;}
+footer > p.footer_bottom {color: rgb(141, 141, 141); text-align: center; padding: 25px 0; background: rgb(20, 20, 20); font-size: 14px;}
+footer > p.footer_bottom > a {color: blue; font-size: 12px;}
+/*후터 끝*/

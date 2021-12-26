@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/*슬라이드 섹션 시작*/
+div.slider {position: relative; height: 850px; width: 100%; overflow: hidden; border-top: none; box-sizing:content-box;}
+div.slider > div.slides > div {position: absolute; top: 0; width: 100%; height: 100%; background-color: rgb(255, 255, 255); z-index: 0;}
+div.slider > div.slides > div:first-child {background: url(../images/slide_1.jpg) no-repeat; background-size: cover;}
+div.slider > div.slides > div:first-child > div.slide_desc {position: absolute; top: 180px; right: 12%;}
+div.slider > div.slides > div:first-child > div.slide_desc > h2 {color: white;text-align: right; margin-bottom: 15px;}
+div.slider > div.slides > div:first-child > div.slide_desc > h2 > span {background-color: rgb(200, 0, 0); color: white; display: inline-block; padding: 2px 10px 6px;}
+div.slider > div.slides > div:first-child > div.slide_desc > h3 {text-align: right; color: white; font-size: 25px; margin-top: 15px; font-family: jejuM; line-height: 45px;}
+div.slider > div.slides > div:first-child > div.slide_desc > h3 > span {color: rgb(253, 196, 9);}
+
+div.slider > div.slides > div:nth-child(2) {background: url(../images/slide_1.jpg) no-repeat; background-size: cover;}
+div.slider > div.slides > div:nth-child(2) > div.slide_desc {position: absolute; top: 180px; right: 12%;}
+div.slider > div.slides > div:nth-child(2) > div.slide_desc > h2 {color: white;text-align: right; margin-bottom: 15px;}
+div.slider > div.slides > div:nth-child(2) > div.slide_desc > h2 > span {background-color: rgb(200, 0, 0); color: white; display: inline-block; padding: 2px 10px 6px;}
+div.slider > div.slides > div:nth-child(2) > div.slide_desc > h3 {text-align: right; color: white; font-size: 25px; margin-top: 15px; font-family: jejuM; line-height: 45px;}
+div.slider > div.slides > div:nth-child(2) > div.slide_desc > h3 > span {color: rgb(253, 196, 9);}
+
+div.slider > div.slides > div:last-child {background: url(../images/slide_1.jpg) no-repeat; background-size: cover;}
+div.slider > div.slides > div:last-child > div.slide_desc {position: absolute; top: 180px; right: 12%;}
+div.slider > div.slides > div:last-child > div.slide_desc > h2 {color: white;text-align: right; margin-bottom: 15px;}
+div.slider > div.slides > div:last-child > div.slide_desc > h2 > span {background-color: rgb(200, 0, 0); color: white; display: inline-block; padding: 2px 10px 6px;}
+div.slider > div.slides > div:last-child > div.slide_desc > h3 {text-align: right; color: white; font-size: 25px; margin-top: 15px; font-family: jejuM; line-height: 45px;}
+div.slider > div.slides > div:last-child > div.slide_desc > h3 > span {color: rgb(253, 196, 9);}
+
+div.slider > div.slides > div.active {left: 0; transition: left 1s; z-index: 10;}
+div.slider > div.slides > div.rm-active {transition: left 1s, right 1s; z-index: 10;}
+div.slider > div.slides > div.left-set {left: -100%;}
+div.slider > div.slides > div.right-set {left: 100%;}
+div.slider > div.btn-slide > div {position: absolute; top: 42%; width: 50px; height: 50px; cursor: pointer; z-index: 100; font-size: 120px;}
+div.slider > div.btn-slide > div:first-child {text-align: right; left: 6%;}
+div.slider > div.btn-slide > div:last-child {right: 6%;}
+div.slider > div.btn-slide > div > i {color: white;}
+div.slider > div.slide_page {position: absolute; top: 760px; left: 50%; z-index: 50;}
+div.slider > div.slide_page > i {color: white; font-size: 18px; margin-right: 15px;}
+/*슬라이드 섹션 끝*/
+
+/*창업문의 배너 시작*/
+div.found_banner > h2 {text-align: center; background-color: rgb(200, 0, 0); color: white; height: 80px; line-height: 80px; white-space: nowrap; margin-bottom: 70px;}
+div.found_banner > h2 > i {font-size: 25px; transform: translateX(23px) translateY(4px);}
+div.found_banner > h2 > em {color: white; font-style: normal; margin-left: 30px;}
+div.found_banner > h2 > span {color: rgb(253, 196, 9);}
+/*창업문의 배너 끝*/
+
+/*제임스 창이 묻습니다. 시작*/
+div.first_title > p {text-align: center; font-family: jejuM; font-size: 25px; margin-bottom: 25px;}
+div.first_title > h2 {text-align: center; font-family: jejuH; font-size: 40px; margin-bottom: 70px;}
+/*제임스 창이 묻습니다. 끝*/
+
+/*첫번째 메인 컨텐츠 시작*/
+#first_content {margin-bottom: 100px; background: rgb(20, 20, 20); height: 596px;}
+#first_content > div {position: relative;}
+#first_content > div > div.james_desc {width: 550px; padding: 10px 45px; position: absolute; top: 0; background: rgba(0, 0, 0, 0.5);}
+#first_content > div > div.james_desc > h2 {color: white; margin-top: 28px; margin-bottom: 30px; font-size: 35px; text-align: justify;}
+#first_content > div > div.james_desc > p {color: white; font-family: jejuM; font-size: 20px; line-height: 30px; text-indent: 10px; text-align: justify;}
+#first_content > div > div.james_desc > p:last-child {margin-bottom: 29px;}
+#first_content > div > p {position: absolute; color: white; font-family: jejuM; top: 505px; right: -20px; font-size: 25px; text-align: right; line-height: 35px; text-shadow: 0 0 4px rgba(255, 255, 255, 0.589);}
+/*첫번째 메인 컨텐츠 끝*/
+
+/*짬뽕맨의 짬뽕이 맛있는 이유*/
+div.second_title > h2 {text-align: center; font-family: jejuM; font-size: 35px; margin-bottom: 30px; font-weight: bold;}
+div.second_title > p {text-align: center; font-family: jejuM; font-size: 20px; margin-bottom: 70px;}
+/*짬뽕맨의 짬뽕이 맛있는 이유*/
+
+/*두번째 메인 컨텐츠 시작*/
+#second_content > div {padding: 0 20px; margin-bottom: 100px;}
+#second_content > div > div.items {display: flex; margin-bottom: 60px; justify-content: space-between; border-top: 1px solid rgb(197, 197, 197); border-bottom: 1px solid rgb(197, 197, 197); height: 400px; box-sizing: content-box; box-shadow: 0 3px 4px -4px rgb(95, 95, 95);}
+#second_content > div > div.items > p {overflow: hidden;}
+#second_content > div > div.items > p > img {transition: all 350ms ease;}
+#second_content > div > div.items > p > img:hover {transform: scale(1.03);}
+#second_content > div > div.items:nth-child(2) > div.item_desc {border-right: none; /*border-left: 1px solid rgb(197, 197, 197);*/}
+#second_content > div > div.items > div.item_desc {width: 520px; padding: 70px 10px 0; /*border-right: 1px solid rgb(197, 197, 197);*/}
+#second_content > div > div.items > div.item_desc > h3 {font-size: 35px; text-align: right; margin-bottom: 15px; position: relative;}
+#second_content > div > div.items > div.item_desc:nth-child(2) > h3 {text-align: left;}
+#second_content > div > div.items > div.item_desc > p {text-align: right; margin-bottom: 25px; font-family: jejuM; font-size: 20px; line-height: 28px; font-weight: 400;}
+#second_content > div > div.items > div.item_desc:nth-child(2) > p {text-align: left; line-height: 28px;}
+#second_content > div > div.items > div.item_desc > p.sub_title {font-size: 18px; font-weight: bold; color: rgb(83, 83, 83); padding: 5px;}
+#second_content > div > div.items > div.item_desc:nth-child(even) > p.real_desc {text-indent: 10px;}
+/*두번째 메인 컨텐츠 시작*/
+
+/*세번째 메인 컨텐츠 시작*/
+section#third_content {margin-bottom: 100px;}
+section#third_content > div > p {text-align: center; font-size: 25px; font-family: BBB;}
+section#third_content > div > p > span {font-size: 35px; margin-top: 20px; font-family: Gothic; font-weight: bold; display: block;} 
+section#third_content > div > span {text-align: center; margin-top: 60px; font-size: 30px; margin-bottom: 85px; display: block; font-family: jejuM;} 
+section#third_content > p {width: 1900px; height: 400px; margin: 0 auto;}
+/*세번째 메인 컨텐츠 끝*/
